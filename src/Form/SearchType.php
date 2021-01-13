@@ -40,14 +40,14 @@ class SearchType extends AbstractType
                 'expanded' => true,
                 'multiple' => true
             ])
-            ->add('minPrice', NumberType::class, [
+            ->add('min', NumberType::class, [
                 'label' => false,
                 'required' => false,
                 'attr' => [
                     'placeholder' => 'Prix min'
                 ]
             ])
-            ->add('maxPrice', NumberType::class, [
+            ->add('max', NumberType::class, [
                 'label' => false,
                 'required' => false,
                 'attr' => [
