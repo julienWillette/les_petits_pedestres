@@ -34,6 +34,11 @@ class Size
         $this->products = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->size;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
