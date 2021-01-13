@@ -25,12 +25,12 @@ use App\Entity\Size;
     /**
      * @var null|integer
      */
-    public $maxPrice;
+    public $max;
 
     /**
      * @var null|integer
      */
-    public $minPrice;
+    public $min;
 
     /**
      * @var boolean
