@@ -72,6 +72,11 @@ class Product
      */
     private $color;
 
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $rate;
+
     public function __construct()
     {
         $this->picture = new ArrayCollection();
@@ -216,6 +221,18 @@ class Product
     public function setColor(?Color $color): self
     {
         $this->color = $color;
+
+        return $this;
+    }
+
+    public function getRate(): ?float
+    {
+        return $this->rate;
+    }
+
+    public function setRate(float $rate): self
+    {
+        $this->rate = $rate;
 
         return $this;
     }
