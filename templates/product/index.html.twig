@@ -41,12 +41,13 @@
           {% for product in products %}
 
                   <a class="aled-link" href="{{ path('product_show', {'slug': product.slug }) }}">
-                    <div class="card-dwarf green" style = "background-color: {{ product.color.hexadecimal }};">
+                    <div class="card-dwarf green">
                         <p class="title-card">{{ product.name }}</p>
                         <p class="heart"><i class="far fa-heart"></i></p>
                         <p class="number-like">{{ random(4) }}.{{ random(9) }}</p>
                         <img class="img-product" src="{{ product.picture[0].url }}">
                         <div class="container-prix"><p class="price">{{ product.price }}€</p></div>
+                        <a href="{{ path('cart_add', { 'id' : product.id }) }}"><button type="button" class="btn btn-primary btn-lg">Add to cart</button></a>
                       </a>
                     </div>
           {% endfor %}          
