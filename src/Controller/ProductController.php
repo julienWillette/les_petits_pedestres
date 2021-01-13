@@ -21,7 +21,7 @@ class ProductController extends AbstractController
         ]);
     }
     /**
-     * @Route("/product/{id}", name="product_show")
+     * @Route("/product/{slug}", name="product_show")
      */
     public function show(Product $product): Response
     {

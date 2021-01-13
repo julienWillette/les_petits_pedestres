@@ -32,6 +32,7 @@ class ProductCrudController extends AbstractCrudController
             ->setEntryType(PictureType::class),
             AssociationField::new('category'),
             AssociationField::new('size'),
+            TextField::new('slug'),
         ];
     }
 }
