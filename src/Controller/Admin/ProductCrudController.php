@@ -33,6 +33,7 @@ class ProductCrudController extends AbstractCrudController
             AssociationField::new('category'),
             AssociationField::new('size'),
             TextField::new('slug'),
+            AssociationField::new('color'),
         ];
     }
 }

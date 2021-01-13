@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Size;
+use App\Entity\Color;
 use App\Entity\Product;
 use App\Entity\Category;
 use Symfony\Component\HttpFoundation\Response;
@@ -33,5 +34,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Product', 'fas fa-list', Product::class);
         yield MenuItem::linkToCrud('Category', 'fas fa-list', Category::class);
         yield MenuItem::linkToCrud('Size', 'fas fa-list', Size::class);
+        yield MenuItem::linkToCrud('Color', 'fas fa-list', Color::class);
     }
 }

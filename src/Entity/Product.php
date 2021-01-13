@@ -66,6 +66,12 @@ class Product
      */
     private $slug;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Color::class, inversedBy="products")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $color;
+
     public function __construct()
     {
         $this->picture = new ArrayCollection();
@@ -198,6 +204,18 @@ class Product
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getColor(): ?Color
+    {
+        return $this->color;
+    }
+
+    public function setColor(?Color $color): self
+    {
+        $this->color = $color;
 
         return $this;
     }
