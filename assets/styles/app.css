@@ -89,3 +89,8 @@ opacity: 1;
     text-decoration: none;
     color:black;
 }
+
+.aled-link:visited {
+    text-decoration: none;
+    color:black;
+}
