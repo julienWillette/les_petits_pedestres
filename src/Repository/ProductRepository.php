@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Product;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use App\Data\SearchData;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Product|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,11 +21,31 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
+    /**
+     * Récupère les produits en lien avec une recherche
+     */
+    public function findSearch(SearchData $search)
+    {
+        return $query = $this->getSearchQuery($search)->getQuery()->getResult();
+    }
+
+     /**
+     * Récupère le prix minimum et maximum correspondant à une recherche
+     * @return integer[]
+     */
+    public function findMinMax(SearchData $search): array
+    {
+        $results = $this->getSearchQuery($search, true)
+            ->select('MAX(p.price) as max')
+            ->getQuery()
+            ->getScalarResult();
+        return [0, (int)$results[0]['max']];
+    }
+
     /*
     * Fonction de recherche sur les produits
-    * Return Product[]
     */
-    public function findSearch($search)
+    private function getSearchQuery(SearchData $search): QueryBuilder
     {
         $query = $this
         ->createQueryBuilder('p')
@@ -37,16 +59,16 @@ class ProductRepository extends ServiceEntityRepository
                     ->setParameter('q', "%{$search->q}%");
             }
     
-            if (!empty($search->minPrice)) {
+            if (!empty($search->min)) {
                 $query = $query
                     ->andWhere('p.price >= :min')
-                    ->setParameter('min', $search->minPrice);
+                    ->setParameter('min', $search->min);
             }
     
-            if (!empty($search->maxPrice)) {
+            if (!empty($search->max)) {
                 $query = $query
                     ->andWhere('p.price <= :max')
-                    ->setParameter('max', $search->maxPrice);
+                    ->setParameter('max', $search->max);
             }
     
             if (!empty($search->promo)) {
@@ -66,10 +88,6 @@ class ProductRepository extends ServiceEntityRepository
                     ->setParameter('category', $search->category);
             }
 
-            return $query->getQuery()->getResult();
-    }
-
-    private function getSearchQuery(SearchData $search, $ignorePrice = false): QueryBuilder
-    {
+            return $query;
     }
 }

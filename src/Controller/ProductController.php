@@ -25,10 +25,12 @@ class ProductController extends AbstractController
         $form = $this->createForm(SearchType::class, $data);
         $form->handleRequest($request);
         $products = $productRepository->findSearch($data);
-
+        [$min, $max] = $productRepository->findMinMax($data);
         return $this->render('product/index.html.twig', [
             'products' => $products,
             'form' => $form->createView(),
+            'min' => $min,
+            'max' => $max
         ]);
     }
     /**
