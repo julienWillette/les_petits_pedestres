@@ -43,7 +43,7 @@
             <div class="card-dwarf green" style="background-color: {{ product.color.hexadecimal }};">
               <p class="title-card">{{ product.name }}</p>
               <p class="heart"><i class="far fa-heart"></i></p>
-              <p class="number-like">{{ random(4) }}.{{ random(9) }}</p>
+              <p class="number-like">{{ product.rate }}</p>
               <img class="img-product" src="{{ product.picture[0].url }}">
               <div class="container-prix">
                 <p class="price">{{ product.price }}€</p>
