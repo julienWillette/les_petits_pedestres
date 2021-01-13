@@ -39,6 +39,11 @@ class Color
         $this->products = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->hexadecimal;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

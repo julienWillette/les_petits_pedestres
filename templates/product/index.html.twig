@@ -5,40 +5,68 @@
 
 {% block body %}
 
-<div class="container-fluid">
-<div class="col-md-3">
-{{ form_start(form) }}
-  {{ form_row(form.q) }}
-<h4>Catégories</h4>
-  {{ form_row(form.category) }}
-<h4>Taille</h4>
-  {{ form_row(form.size) }}
-  <h4>Prix</h4>
-  <div class="row">
-    <div class="col-md-6">
-      {{ form_row(form.min) }}
-    </div>
-    <div class="col-md-6">
-      {{ form_row(form.max) }}
-    </div>
-  </div>
-  <div id="price-slider" data-min="{{ min }}" data-max="{{ max }}" class="mt-3 mb-3"></div>
+ <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-3 container-filter">
+          {{ form_start(form) }}
+                    <p class="filter-title">Filtrer par :</p>
+                    {{ form_row(form.q) }}
+                    <hr class="hr-filter">
+                    <p class="subtitle-filter">Prix</p>
+                    <div class="row">
+                      <div class="col-md-6">
+                        {{ form_row(form.min) }}
+                      </div>
+                      <div class="col-md-6">
+                        {{ form_row(form.max) }}
+                      </div>
+                    </div>
+                    <div id="price-slider" data-min="{{ min }}" data-max="{{ max }}" class="mt-3 mb-3">
+                    </div>
+                    <hr class="hr-filter">
+                    <p class="subtitle-filter">Categorie</p>
+                    <p class="filter">{{ form_row(form.category) }}</p>
+                    <hr class="hr-filter">
+                    <p class="subtitle-filter">taille</p>
+                    <p class="filter">{{ form_row(form.size) }}</p>
+                    <hr class="hr-filter">
+                    <p class="subtitle-filter">En promotion</p>
+                    <p class="filter">{{ form_row(form.promo) }}</p>
+                    <button type="submit" class="btn btn-primary w-100">Filtrer</button>
+          {{ form_end(form) }}
+				</div>
+				<div class="col-md-9">
+          {% for product in products %}
 
-  <h4>Promotions</h4>
-  {{ form_row(form.promo) }}
-
-<button type="submit" class="btn btn-primary w-100">Filtrer</button>
-
-{{ form_end(form) }}
-<div class="col-md-9">
-
-
- {% for product in products %}
-     {{dump(product.name)}}
- {% endfor %}
-
-</div>
+                  <a class="aled-link" href="{{ path('product_show', {'slug': product.slug }) }}">
+                    <div class="card-dwarf green" style = "background-color: {{ product.color.hexadecimal }};">
+                        <p class="title-card">{{ product.name }}</p>
+                        <p class="heart"><i class="far fa-heart"></i></p>
+                        <p class="number-like">{{ random(4) }}.{{ random(9) }}</p>
+                        <img class="img-product" src="{{ product.picture[0].url }}">
+                        <div class="container-prix"><p class="price">{{ product.price }}€</p></div>
+                      </a>
+                    </div>
+          {% endfor %}          
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
 {% endblock %}
+
+ {#{% for product in products %}
+     {{dump(product.name)}}
+ {% endfor %}
+
+<h4>Catégories</h4>
+  
+<h4>Taille</h4>
+  <h4>Prix</h4>
+
+  <h4>Promotions</h4>
+<div class="col-md-9">#}
