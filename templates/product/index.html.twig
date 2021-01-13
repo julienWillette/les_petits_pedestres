@@ -5,6 +5,16 @@
 
 {% block body %}
 
-{{ dump(products) }}
+<div class="container-fluid">
+<div class="col-md-3">
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<button type="submit" class="btn btn-primary w-100">Filtrer</button>
+{{ form_end(form) }}
+</div>
+<div class="col-md-9">
+</div>
+</div>
+
 
 {% endblock %}
