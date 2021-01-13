@@ -11,18 +11,6 @@
 {{ form_widget(form) }}
 <button type="submit" class="btn btn-primary w-100">Filtrer</button>
 {{ form_end(form) }}
-<pre>
-    {{ dump(data) }}
-    <pre>
-    {% if products %}
-        {{ dump(products) }}
-        {% endif %}
-
-        {% for product in products %}
-            {{dump(product.name)}}
-        {% endfor %}
-    </pre>
-</pre>
 </div>
 <div class="col-md-9">
 </div>
