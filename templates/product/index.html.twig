@@ -9,12 +9,22 @@
 <div class="col-md-3">
 {{ form_start(form) }}
 {{ form_widget(form) }}
-<button class="btn-submit">filtrer</button>
+<button type="submit" class="btn btn-primary w-100">Filtrer</button>
 {{ form_end(form) }}
+<pre>
+    {{ dump(data) }}
+    <pre>
+    {% if products %}
+        {{ dump(products) }}
+        {% endif %}
 
+        {% for product in products %}
+            {{dump(product.name)}}
+        {% endfor %}
+    </pre>
+</pre>
 </div>
 <div class="col-md-9">
-{{ dump(products) }}
 </div>
 </div>
 

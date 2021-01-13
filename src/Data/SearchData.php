@@ -15,12 +15,12 @@ use App\Entity\Size;
     /**
      * @var Category[]
      */
-    public $categories = [];
+    public $category = [];
 
     /**
      * @var Size[]
      */
-    public $sizes = [];
+    public $size = [];
 
     /**
      * @var null|integer
