@@ -25,7 +25,7 @@ class ProductCrudController extends AbstractCrudController
         return [
             TextField::new('name'),
             TextEditorField::new('content'),
-            TextField::new('price'),
+            IntegerField::new('price'),
             IntegerField::new('quantity'),
             BooleanField::new('isPromo'),
             CollectionField::new('picture')

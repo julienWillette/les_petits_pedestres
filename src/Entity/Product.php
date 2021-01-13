@@ -105,7 +105,7 @@ class Product
         return $this->price;
     }
 
-    public function setPrice(int $quantity): self
+    public function setPrice(int $price): self
     {
         $this->price = $price;
 

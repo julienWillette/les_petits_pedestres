@@ -11,10 +11,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+    /**
+     * @Route("/produit", name="")
+     */
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/product", name="product")
+     * @Route("/", name="product")
      */
     public function index(ProductRepository $productRepository, Request $request): Response
     {
@@ -26,11 +29,10 @@ class ProductController extends AbstractController
         return $this->render('product/index.html.twig', [
             'products' => $products,
             'form' => $form->createView(),
-            'data' => $data
         ]);
     }
     /**
-     * @Route("/product/{slug}", name="product_show")
+     * @Route("/{slug}", name="product_show")
      */
     public function show(Product $product): Response
     {
