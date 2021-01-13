@@ -1,0 +1,91 @@
+.container-filter{
+    width: 300px;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    margin-left: 2%;
+    margin-top: 3%;
+    display: inline-table;
+    position: static;
+}
+.filter-title{
+    font-size: 30px;
+}
+
+.subtitle-filter{
+    font-size: 25px;
+}
+
+.filter{
+    font-size: 12px;
+}
+
+.hr-filter{
+    border-top: 1px solid #D2D2D2;
+}
+
+.card-dwarf{
+    display: inline-block;
+    margin-left: 3%;
+    margin-top: 4%;
+width: 400px;
+height: 419px;
+background: #D1FAEB 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 20px;
+opacity: 1;
+}
+
+
+.title-card{
+    position: relative;
+    top: 280px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.heart{
+    position: relative;
+    top: 290px;
+    font-size: 25px;
+    left: 15px;
+
+}
+
+.number-like{
+    position: relative;
+    top: 230px;
+    left: 350px;
+    font-size: 25px;
+
+}
+
+.img-product{
+    position: relative;
+    bottom: 100px;
+    left: 140px;
+    width: 30%;
+}
+
+.container-prix{
+    position: relative;
+    background-color: #fff;
+    border-radius: 0px 20px;
+    bottom: 380px;
+    left: 320px;
+    font-size: 40px;
+    font-weight: bold;
+    width: 20%;
+   padding-left: 40px;
+
+}
+
+.price{
+    position: relative;
+    right: 35px;
+}
+
+.aled-link:link {
+    text-decoration: none;
+    color:black;
+}
