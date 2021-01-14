@@ -19,9 +19,16 @@
         <a href="{{ path('home') }}" class="path">{{ 'Accueil'|trans }}</a>
         <a href="{{ path('product') }}" class="path">{{ 'Produits'|trans }}</a>
         <a href="#" class="path">{{ 'Blog'|trans }}</a>
-        <button class="login">{{ 'Se connecter'|trans }}</button>
-        <button class="signup">{{ 'S\'inscrire'|trans }}</button>
-        <a href="{{ path('cart_index') }}" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i></a>
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+        {% if app.session.get('cart') %}
+        <a href="{{ path('cart_index') }}" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i>
+        <span class="badge badge-danger badge-cart">{{ app.session.get('count') }}</span></a>
+         {% else %}
+            <a href="{{ path('cart_index') }}">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        {% endif %}
     </div>
     <p class="sentence">
         {{ 'Tout pour votre jardin,

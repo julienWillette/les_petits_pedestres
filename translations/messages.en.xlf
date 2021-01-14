@@ -5,103 +5,98 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="kKzpQAZ" resname="Filtrer par">
-        <source>Filtrer par</source>
-        <target>Filter by:</target>
-      </trans-unit>
       <trans-unit id="UzFhc1Y" resname="Accueil">
         <source>Accueil</source>
-        <target>__Accueil</target>
+        <target>Home</target>
       </trans-unit>
       <trans-unit id="SbPPeKx" resname="Produits">
         <source>Produits</source>
-        <target>__Produits</target>
+        <target>Products</target>
       </trans-unit>
       <trans-unit id="jGvAmVN" resname="Blog">
         <source>Blog</source>
-        <target>__Blog</target>
-      </trans-unit>
-      <trans-unit id="CsPSyzA" resname="Se connecter">
-        <source>Se connecter</source>
-        <target>__Se connecter</target>
-      </trans-unit>
-      <trans-unit id="PCX0_17" resname="S'inscrire">
-        <source>S'inscrire</source>
-        <target>__S'inscrire</target>
+        <target>Blog</target>
       </trans-unit>
       <trans-unit id="iiQYwQ8" resname="Tout pour votre jardin,&#10;        à portée de nain">
         <source>Tout pour votre jardin,
         à portée de nain</source>
-        <target>__Tout pour votre jardin,
-        à portée de nain</target>
+        <target>Get your garden gnome !</target>
       </trans-unit>
       <trans-unit id="qb2L0j2" resname="Les plus populaires">
         <source>Les plus populaires</source>
-        <target>__Les plus populaires</target>
+        <target>The most popular</target>
       </trans-unit>
       <trans-unit id="qMD7oaF" resname="Bienvenue !">
         <source>Bienvenue !</source>
-        <target>__Bienvenue !</target>
+        <target>Welcome</target>
       </trans-unit>
-      <trans-unit id="DuEPqiU" resname="Nos articles">
-        <source>Nos articles</source>
-        <target>__Nos articles</target>
+      <trans-unit id="AP4XPYb" resname="Nos produits">
+        <source>Nos produits</source>
+        <target>Our products</target>
+      </trans-unit>
+      <trans-unit id="kKzpQAZ" resname="Filtrer par">
+        <source>Filtrer par</source>
+        <target>Filter by</target>
       </trans-unit>
       <trans-unit id="VMMk9sE" resname="Prix">
         <source>Prix</source>
-        <target>__Prix</target>
+        <target>Price</target>
       </trans-unit>
       <trans-unit id="SxUSCLz" resname="Catégories">
         <source>Catégories</source>
-        <target>__Catégories</target>
+        <target>Categories</target>
       </trans-unit>
       <trans-unit id="LLjxnUD" resname="En Promotion">
         <source>En Promotion</source>
-        <target>__En Promotion</target>
+        <target>Sales</target>
       </trans-unit>
       <trans-unit id="1ndJcxH" resname="Désolée ! Votre recherche nain rien donnée">
         <source>Désolée ! Votre recherche nain rien donnée</source>
-        <target>__Désolée ! Votre recherche nain rien donnée</target>
+        <target>Sorry ! No gnome has been found !</target>
       </trans-unit>
-      <trans-unit id="AsGpMnx" resname="product.name">
-        <source>product.name</source>
-        <target>__product.name</target>
+      <trans-unit id="ExZiI0X" resname="Partager">
+        <source>Partager</source>
+        <target>Share it</target>
       </trans-unit>
       <trans-unit id="F_ruSJs" resname="Détails">
         <source>Détails</source>
-        <target>__Détails</target>
+        <target>Details</target>
       </trans-unit>
       <trans-unit id="kUGC1eJ" resname="Dimensions">
         <source>Dimensions</source>
-        <target>__Dimensions</target>
+        <target>_Dimensions</target>
+      </trans-unit>
+      <trans-unit id="0Yq87Uy" resname="Ajouter au panier">
+        <source>Ajouter au panier</source>
+        <target>Add to cart</target>
       </trans-unit>
       <trans-unit id="lKWm078" resname="Votre panier">
         <source>Votre panier</source>
-        <target>__Votre panier</target>
+        <target>Your cart</target>
       </trans-unit>
       <trans-unit id="ssEkU20" resname="Nom">
         <source>Nom</source>
-        <target>__Nom</target>
+        <target>Name</target>
       </trans-unit>
       <trans-unit id="Tc1qa5n" resname="Prix Unitaire">
         <source>Prix Unitaire</source>
-        <target>__Prix Unitaire</target>
+        <target>Unit Price</target>
       </trans-unit>
       <trans-unit id="olio7wM" resname="Quantité">
         <source>Quantité</source>
-        <target>__Quantité</target>
+        <target>Quantity</target>
       </trans-unit>
       <trans-unit id="ybPDgkf" resname="Total">
         <source>Total</source>
-        <target>__Total</target>
+        <target>Total</target>
       </trans-unit>
       <trans-unit id="oDtuWT5" resname="Passer au paiement">
         <source>Passer au paiement</source>
-        <target>__Passer au paiement</target>
+        <target>Checkout</target>
       </trans-unit>
       <trans-unit id="3qx.DSp" resname="Votre panier est vide !">
         <source>Votre panier est vide !</source>
-        <target>__Votre panier est vide !</target>
+        <target>Your cart is empty !</target>
       </trans-unit>
     </body>
   </file>
