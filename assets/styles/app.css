@@ -313,3 +313,15 @@
     background-color: red;
 }
 
+/* PAGINATION */
+
+a.page-link {
+    color: #76c2a6;
+}
+
+.page-item.active .page-link {
+    background-color: #76c2a6;
+    border-color: #76c2a6;
+}
+
+/* END PAGINATION */
