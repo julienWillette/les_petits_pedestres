@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}{{ 'Accueil'|trans }}{% endblock %}
 {% block stylesheets %}
 <style>
     .nav-general {
@@ -16,21 +16,28 @@
     <img src="https://zupimages.net/up/21/02/d5yc.png" alt="" class="img-dwarf">
     <img class="logo-petit-pedestre" src="https://zupimages.net/up/21/02/ysft.png" alt="logo-petit-pedestre">
     <div class="nav-menu">
-        <a href="{{ path('home') }}" class="path">Home</a>
-        <a href="{{ path('product') }}" class="path">Produits</a>
-        <a href="#" class="path">Blog</a>
-        <button class="login">Login</button>
-        <button class="signup">Sign Up</button>
+        <a href="{{ path('home') }}" class="path">{{ 'Accueil'|trans }}</a>
+        <a href="{{ path('product') }}" class="path">{{ 'Produits'|trans }}</a>
+        <a href="#" class="path">{{ 'Blog'|trans }}</a>
+        <button class="login">{{ 'Se connecter'|trans }}</button>
+        <button class="signup">{{ 'S\'inscrire'|trans }}</button>
         <a href="#" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i></a>
     </div>
     <p class="sentence">
-        Tout pour votre jardin,
-        à portée de nain</p>
+        {{ 'Tout pour votre jardin,
+        à portée de nain'|trans }}</p>
 </header>
 
 </div>
+
+{% for locale in locales %}
+    {% if locale != app.request.locale %}
+        <a href="{{ path('change_locale', {'locale': locale}) }}">{{ locale }}</a>
+    {% endif %}
+{% endfor %}
+
 <div class="container-fluid ">
-    <p class="sectionHome">Les plus populaires</p>
+    <p class="sectionHome">{{ 'Les plus populaires'|trans }}</p>
 
 </div>
 <div class="container-fluid contain-home-card mb-5">
