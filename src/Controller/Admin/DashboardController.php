@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Blog;
 use App\Entity\Size;
 use App\Entity\Color;
 use App\Entity\Product;
@@ -35,5 +36,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Category', 'fas fa-list', Category::class);
         yield MenuItem::linkToCrud('Size', 'fas fa-list', Size::class);
         yield MenuItem::linkToCrud('Color', 'fas fa-list', Color::class);
+        yield MenuItem::linkToCrud('Blog', 'fas fa-list', Blog::class);
     }
 }

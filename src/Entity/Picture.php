@@ -24,9 +24,13 @@ class Picture
 
     /**
      * @ORM\ManyToOne(targetEntity=Product::class, inversedBy="picture")
-     * @ORM\JoinColumn(nullable=false)
      */
     private $product;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Blog::class, inversedBy="picture")
+     */
+    private $blog;
 
     public function getId(): ?int
     {
@@ -53,6 +57,18 @@ class Picture
     public function setProduct(?Product $product): self
     {
         $this->product = $product;
+
+        return $this;
+    }
+
+    public function getBlog(): ?Blog
+    {
+        return $this->blog;
+    }
+
+    public function setBlog(?Blog $blog): self
+    {
+        $this->blog = $blog;
 
         return $this;
     }

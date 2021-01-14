@@ -94,3 +94,24 @@ opacity: 1;
     text-decoration: none;
     color:black;
 }
+.blog-card{
+    margin-right: 10px;
+}
+
+.blog-filter{
+    background-image: url("https://www.jardinsdebroceliande.fr/voy_content/uploads/2019/09/DSC_1104BD.jpg;");
+    height: 30em;
+    filter: brightness(60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.blog-jumbotron{
+    color: white;
+    filter: invert();
+}
+
+h1{
+    font-size: 3em; ;
+}
