@@ -29,6 +29,9 @@
                 <i class="fas fa-shopping-cart"></i>
             </a>
         {% endif %}
+        <a href="http://localhost:8000/en/" class="path">EN</a>
+        <a href="http://localhost:8000/fr/" class="path">FR</a>
+        <a href="http://localhost:8000/uz/" class="path">UZ</a>
     </div>
     <p class="sentence">
         {{ 'Tout pour votre jardin,
@@ -36,12 +39,6 @@
 </header>
 
 </div>
-
-{% for locale in locales %}
-    {% if locale != app.request.locale %}
-        <a href="{{ path('change_locale', {'locale': locale}) }}">{{ locale }}</a>
-    {% endif %}
-{% endfor %}
 
 <div class="container-fluid ">
     <p class="sectionHome">{{ 'Les plus populaires'|trans }}</p>
