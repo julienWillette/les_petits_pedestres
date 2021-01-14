@@ -11,21 +11,24 @@
 
     {% if items | length > 0 %}
         <table class="table">
-            <thead>
-                <tr>
+            <thead class='thead-dark'>
+                <tr class='table-primary'>
+                    <th class='th-cart'> Image </th>
                     <th>{{ 'Nom'|trans }}</th>
                     <th>{{ 'Prix Unitaire'|trans }}</th>
                     <th>{{ 'Quantité'|trans }}</th>
                     <th>{{ 'Total'|trans }}</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 {% for item in items %}
                     <tr>
+                        <th><div class="container contain-img-cart"><img class='img-cart' src='{{ item.product.picture[0].url }}'></div></th>
                         <td>{{ item.product.name }}</td>
-                        <td>{{ item.product.price }}</td>
+                        <td>{{ item.product.price }} €</td>
                         <td>{{ item.quantity }}</td>
-                        <td>{{ item.product.price * item.quantity }}</td>
+                        <td>{{ item.product.price * item.quantity }} €</td>
                         <td>
                             <a href="{{ path('cart_remove', {'id': item.product.id}) }}" class="btn btn-sm btn-danger">
                                 <i class="fas fa-trash"></i>
@@ -35,7 +38,7 @@
                 {% endfor %}
             </tbody>
             <tfoot>
-                <tr>
+                <tr class='table-success'>
                     <th colspan="4" class="text-right">
                         Total :
                     </th>
@@ -44,42 +47,18 @@
                 </tr>
             </tfoot>
         </table>
-        <a href="{{ path('success') }}"<button type="submit" id="checkout-button">{{ 'Passer au paiement'|trans }}</button></a>
+        <a href="{{ path('success') }}"><button type="submit" id="checkout-button" >{{ 'Passer au paiement'|trans }}</button></a>
 
     {% else %}
         <p> {{ 'Votre panier est vide !'|trans }} !</p>
     {% endif %}
 
+
+
+   
+
 {% endblock %}
 
 {% block javascripts %}
-
-    <script type="text/javascript">
-    // Create an instance of the Stripe object with your publishable API key
-    var stripe = Stripe("pk_live_51I2xgzDEHZhwUvxLmhiGaJdGbkH9kUjl81CdH4x51bRugXJbSDl8HXzuc9u3vN3fG9U3IBxWSf5S5kkpOE6jy3yh00gFs8CuoU");
-    var checkoutButton = document.getElementById("checkout-button");
-    checkoutButton.addEventListener("click", function () {
-      fetch("/create-checkout-session", {
-        method: "POST",
-      })
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (session) {
-          return stripe.redirectToCheckout({ sessionId: session.id });
-        })
-        .then(function (result) {
-          // If redirectToCheckout fails due to a browser or network
-          // error, you should display the localized error message to your
-          // customer using error.message.
-          if (result.error) {
-            alert(result.error.message);
-          }
-        })
-        .catch(function (error) {
-          console.error("Error:", error);
-        });
-    });
-  </script>
 
 {% endblock %}
