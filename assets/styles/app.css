@@ -451,3 +451,11 @@ header{
     margin: auto;
     margin-top: 5%;
 }
+
+/* SUCCESS */
+
+.btn-command-success {
+    background-color: #76c2a6;
+}
+
+/* END SUCCESS */
