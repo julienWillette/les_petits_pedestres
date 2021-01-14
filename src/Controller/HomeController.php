@@ -16,8 +16,8 @@ class HomeController extends AbstractController
     public function index(ProductRepository $productRepository): Response
     {
         $products = $productRepository->findBy(
-            array(),
-            array('id' => 'DESC'),
+            array('rate' => array(4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0)),
+            array('rate' => 'DESC'),
             4,
             0
         );;
