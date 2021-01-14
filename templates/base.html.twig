@@ -25,7 +25,7 @@
         <a href="{{ path('cart_index') }}" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i>
         <span class="badge badge-danger badge-cart">{{ app.session.get('count') }}</span></a>
          {% else %}
-            <a href="{{ path('cart_index') }}">
+            <a href="{{ path('cart_index') }}" class="cart-cart cart-nav">
                 <i class="fas fa-shopping-cart"></i>
             </a>
         {% endif %}
