@@ -37,6 +37,7 @@
           {{ form_end(form) }}
         </div>
         <div class="col-md-9">
+          
           {% for product in products %}
 
           <a class="aled-link" href="{{ path('product_show', {'slug': product.slug }) }}">
@@ -49,7 +50,15 @@
                 <p class="price">{{ product.price }}€</p>
               </div>
         </div>
+        {% else %}
+        <div class="container-fluid align-items-center mt-5">
+            <img src="https://www.but.fr/fstrz/r/s/media.but.fr/images_produits/produit-xl/5055195023179_Q.jpg?frz-v=353" alt="">
+            <h1>Votre recherche nain rien donnée</h1>
+        </div>
         {% endfor %}
+        <div class="mt-5 d-flex justify-content-end">
+          {{ knp_pagination_render(products) }}
+        </div>
       </div>
     </div>
   </div>
