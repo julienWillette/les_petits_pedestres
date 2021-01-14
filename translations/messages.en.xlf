@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="SbPPeKx" resname="Produits">
+        <source>Produits</source>
+        <target>Products</target>
+      </trans-unit>
+      <trans-unit id="jGvAmVN" resname="Blog">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="iiQYwQ8" resname="Tout pour votre jardin,&#10;        à portée de nain">
+        <source>Tout pour votre jardin,
+        à portée de nain</source>
+        <target>Get your garden gnome !</target>
+      </trans-unit>
+      <trans-unit id="qb2L0j2" resname="Les plus populaires">
+        <source>Les plus populaires</source>
+        <target>The most popular</target>
+      </trans-unit>
+      <trans-unit id="qMD7oaF" resname="Bienvenue !">
+        <source>Bienvenue !</source>
+        <target>Welcome</target>
+      </trans-unit>
+      <trans-unit id="AP4XPYb" resname="Nos produits">
+        <source>Nos produits</source>
+        <target>Our products</target>
+      </trans-unit>
+      <trans-unit id="kKzpQAZ" resname="Filtrer par">
+        <source>Filtrer par</source>
+        <target>Filter by</target>
+      </trans-unit>
+      <trans-unit id="VMMk9sE" resname="Prix">
+        <source>Prix</source>
+        <target>Price</target>
+      </trans-unit>
+      <trans-unit id="SxUSCLz" resname="Catégories">
+        <source>Catégories</source>
+        <target>Categories</target>
+      </trans-unit>
+      <trans-unit id="LLjxnUD" resname="En Promotion">
+        <source>En Promotion</source>
+        <target>Sales</target>
+      </trans-unit>
+      <trans-unit id="1ndJcxH" resname="Désolée ! Votre recherche nain rien donnée">
+        <source>Désolée ! Votre recherche nain rien donnée</source>
+        <target>Sorry ! No gnome has been found !</target>
+      </trans-unit>
+      <trans-unit id="ExZiI0X" resname="Partager">
+        <source>Partager</source>
+        <target>Share it</target>
+      </trans-unit>
+      <trans-unit id="F_ruSJs" resname="Détails">
+        <source>Détails</source>
+        <target>Details</target>
+      </trans-unit>
+      <trans-unit id="kUGC1eJ" resname="Dimensions">
+        <source>Dimensions</source>
+        <target>_Dimensions</target>
+      </trans-unit>
+      <trans-unit id="0Yq87Uy" resname="Ajouter au panier">
+        <source>Ajouter au panier</source>
+        <target>Add to cart</target>
+      </trans-unit>
+      <trans-unit id="lKWm078" resname="Votre panier">
+        <source>Votre panier</source>
+        <target>Your cart</target>
+      </trans-unit>
+      <trans-unit id="ssEkU20" resname="Nom">
+        <source>Nom</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="Tc1qa5n" resname="Prix Unitaire">
+        <source>Prix Unitaire</source>
+        <target>Unit Price</target>
+      </trans-unit>
+      <trans-unit id="olio7wM" resname="Quantité">
+        <source>Quantité</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="ybPDgkf" resname="Total">
+        <source>Total</source>
+        <target>Total</target>
+      </trans-unit>
+      <trans-unit id="oDtuWT5" resname="Passer au paiement">
+        <source>Passer au paiement</source>
+        <target>Checkout</target>
+      </trans-unit>
+      <trans-unit id="3qx.DSp" resname="Votre panier est vide !">
+        <source>Votre panier est vide !</source>
+        <target>Your cart is empty !</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

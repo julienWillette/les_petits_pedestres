@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Product;
 use App\Form\PictureType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
@@ -34,6 +35,7 @@ class ProductCrudController extends AbstractCrudController
             AssociationField::new('size'),
             TextField::new('slug'),
             AssociationField::new('color'),
+            NumberField::new('rate'),
         ];
     }
 }

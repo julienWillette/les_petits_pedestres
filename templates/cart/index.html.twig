@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'Votre panier'|trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="bg-light p-3">
+        <h1>{{ 'Votre panier'|trans }}</h1>
+    </div>
+
+    {% if items | length > 0 %}
+        <table class="table">
+            <thead class='thead-dark'>
+                <tr class='table-primary'>
+                    <th class='th-cart'> Image </th>
+                    <th>{{ 'Nom'|trans }}</th>
+                    <th>{{ 'Prix Unitaire'|trans }}</th>
+                    <th>{{ 'Quantité'|trans }}</th>
+                    <th>{{ 'Total'|trans }}</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                    <tr>
+                        <th><div class="container contain-img-cart"><img class='img-cart' src='{{ item.product.picture[0].url }}'></div></th>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.product.price }} €</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ item.product.price * item.quantity }} €</td>
+                        <td>
+                            <a href="{{ path('cart_remove', {'id': item.product.id}) }}" class="btn btn-sm btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class='table-success'>
+                    <th colspan="4" class="text-right">
+                        Total :
+                    </th>
+                    <th>{{ total }}</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+        <a href="{{ path('success') }}"><button type="submit" id="checkout-button" >{{ 'Passer au paiement'|trans }}</button></a>
+
+    {% else %}
+        <p> {{ 'Votre panier est vide !'|trans }} !</p>
+    {% endif %}
+
+
+
+   
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
