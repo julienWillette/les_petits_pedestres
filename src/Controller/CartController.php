@@ -101,12 +101,4 @@ class CartController extends AbstractController
         return $this->render('cart/success.html.twig');
     }
 
-
-    /**
-    * @Route("/error", name="error")
-    */
-    public function error()
-    {
-        return $this->render('cart/error.html.twig');
-    }
 }

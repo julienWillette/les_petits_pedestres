@@ -32,7 +32,7 @@
                         <img class="img-show" src="{{ product.picture[0].url }}">
                     </div>
                     <div class="col-md-6 right-col">
-                        <h1 class="title-show" style="color:{{ product.color.hexadecimal }}">{{ product.name }}  <i class="far fa-thumbs-up"></i></h1> 
+                        <h1 class="title-show" style="color:{{ product.color.hexadecimal }}">{{ 'product.name'|trans }}  <i class="far fa-thumbs-up"></i></h1> 
                         <p class="subtitle-show">{{ product.content | slice(0, 80)|striptags }}</p>
                         <p class="subtitle-show">{{ product.content | slice(80, 90)|striptags }}</p>
                             <div class="contain-price-button">
@@ -40,9 +40,9 @@
                                 <a class="button-share" style="background-color:{{ product.color.hexadecimal }}" href="#"> Partager </a>
                             </div>
                             <div class="contain-button">
-                                <a class="middle-button" href="#">Detail</a>
-                                <a class="middle-button-2" href="#">Categorie</a>
-                                <a class="middle-button-3" href="#">Dimension</a>
+                                <a class="middle-button" href="#">{{ 'Détails'|trans }}</a>
+                                <a class="middle-button-2" href="#">{{ 'Catégories'|trans }}</a>
+                                <a class="middle-button-3" href="#">{{ 'Dimensions'|trans }}</a>
                             </div>
                             <p class="detail"><span class="title-description" style="color:{{ product.color.hexadecimal }}">{{ product.name }} : </span>{{ product.content|striptags }}</p>
                             <a href="{{ path('cart_add', { 'id' : product.id }) }}" class="add-cart" style="background-color:{{ product.color.hexadecimal }}"><i class="fas fa-cart-arrow-down"></i> Ajouter au panier</a>
