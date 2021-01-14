@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nos Articles !{% endblock %}
+{% block title %}{{ 'Nos articles'|trans }}{% endblock %}
 
 {% block body %}
 
@@ -55,7 +55,7 @@
         {% else %}
         <div class="container-fluid align-items-center">
             <img src="https://www.but.fr/fstrz/r/s/media.but.fr/images_produits/produit-xl/5055195023179_Q.jpg?frz-v=353" alt="">
-            <h1>Votre recherche nain rien donnée</h1>
+            <h1>{{ 'Désolée ! Votre recherche nain rien donnée'|trans }}</h1>
         </div>
         {% endfor %}
       </div>

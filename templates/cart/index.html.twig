@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Votre panier
+    {{ 'Votre panier'|trans }}
 {% endblock %}
 
 {% block body %}
     <div class="bg-light p-3">
-        <h1>Your cart</h1>
+        <h1>{{ 'Votre panier'|trans }}</h1>
     </div>
 
     {% if items | length > 0 %}
