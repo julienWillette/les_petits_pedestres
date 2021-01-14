@@ -1,8 +1,82 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block stylesheets %}
+<style>
 
+    .middle-button {
+        background-color:{{ product.color.hexadecimal }};
+    }
+    .middle-button-2, .middle-button-3 {
+        color:{{ product.color.hexadecimal }};
+    }
+
+    .middle-button-2:hover, .middle-button-3:hover {
+        color: #fff;
+        background-color: {{ product.color.hexadecimal }};
+    }
+
+    .middle-button:hover {
+        color:#fff;
+    }
+
+
+    .middle-button-2-change {
+        color: #fff;
+        background-color:{{ product.color.hexadecimal }};
+    }
+
+    .middle-button-change {
+        background-color: #fff;
+        color:{{ product.color.hexadecimal }};
+    }
+
+    .middle-button-change:hover {
+        color: #fff;
+        background-color: {{ product.color.hexadecimal }};
+    }
+</style>
+
+{% endblock %}
 {% block body %}
+    <div class="container-fluid container-show" style="background-image: url({{ product.color.url }})">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 contain-dwarf" style="background-image: url({{ product.color.circleColor }})">
+                        <img class="img-show" src="{{ product.picture[0].url }}">
+                    </div>
+                    <div class="col-md-6 right-col">
+                        <h1 class="title-show" style="color:{{ product.color.hexadecimal }}">{{ product.name }}  <i class="far fa-thumbs-up"></i></h1> 
+                        <p class="subtitle-show">{{ product.content | slice(0, 80)|striptags }}</p>
+                        <p class="subtitle-show">{{ product.content | slice(80, 90)|striptags }}</p>
+                            <div class="contain-price-button">
+                                <p class="price-show" style="color:{{ product.color.hexadecimal }}">{{ product.price }}.00€</p>
+                                <a class="button-share" style="background-color:{{ product.color.hexadecimal }}" href="#"> Partager </a>
+                            </div>
+                            <div class="contain-button">
+                                <a class="middle-button" href="#">Detail</a>
+                                <a class="middle-button-2" href="#">Categorie</a>
+                                <a class="middle-button-3" href="#">Dimension</a>
+                            </div>
+                            <p class="detail"><span class="title-description" style="color:{{ product.color.hexadecimal }}">{{ product.name }} : </span>{{ product.content|striptags }}</p>
+                            <a href="#" class="add-cart" style="background-color:{{ product.color.hexadecimal }}"><i class="fas fa-cart-arrow-down"></i> Ajouter au panier</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+{% block javascripts %}
+<script>
+    document.querySelector('.middle-button-2').addEventListener('click', () => {
+        document.querySelector('.middle-button').classList.add('middle-button-change');
+        document.querySelector('.middle-button-2').classList.add('middle-button-2-change');
+        document.querySelector('.middle-button-3').classList.add('middle-button-change');
+        document.querySelector('.detail').innerHTML = "<span class='title-description' style='color:{{ product.color.hexadecimal }}'>{{ product.name }}: </span>{{ product.category }}";
+    });
+
+</script>
+{% endblock %}
 
 {% endblock %}
