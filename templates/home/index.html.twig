@@ -18,7 +18,7 @@
     <div class="nav-menu">
         <a href="{{ path('home') }}" class="path">{{ 'Accueil'|trans }}</a>
         <a href="{{ path('product') }}" class="path">{{ 'Produits'|trans }}</a>
-        <a href="#" class="path">{{ 'Blog'|trans }}</a>
+        <a href="{{ path('blog') }}" class="path">{{ 'Blog'|trans }}</a>
         <button class="login">Login</button>
         <button class="signup">Sign Up</button>
         {% if app.session.get('cart') %}

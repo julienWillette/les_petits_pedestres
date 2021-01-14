@@ -517,6 +517,8 @@ header{
 /* END ICON */
 .blog-card{
     margin-right: 10px;
+    width: 10em;
+    height: 40em;
     }
     
     .blog-filter{
@@ -530,4 +532,14 @@ header{
     .blog-jumbotron{
     color: white;
     filter: invert();
+    }
+    .blog-card-img{
+        width: 10em;
+        height: 17em;
+    }
+    .blog-btn-prm{
+        margin-top: 5px;
+    }
+    .blog-card-text{
+        margin-bottom: 5px;
     }
