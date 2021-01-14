@@ -51,6 +51,11 @@
               <a href="{{ path('cart_add', { 'id' : product.id }) }}"><button type="button" class="btn btn-primary btn-lg">Add to cart</button></a>
           </a>
         </div>
+        {% else %}
+        <div class="container-fluid align-items-center mt-5">
+            <img src="https://www.but.fr/fstrz/r/s/media.but.fr/images_produits/produit-xl/5055195023179_Q.jpg?frz-v=353" alt="">
+            <h1>Votre recherche nain rien donnée</h1>
+        </div>
         {% endfor %}
       </div>
     </div>
