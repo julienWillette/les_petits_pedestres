@@ -34,6 +34,11 @@ class Color
      */
     private $products;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $circleColor;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
@@ -99,6 +104,18 @@ class Color
                 $product->setColor(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCircleColor(): ?string
+    {
+        return $this->circleColor;
+    }
+
+    public function setCircleColor(?string $circleColor): self
+    {
+        $this->circleColor = $circleColor;
 
         return $this;
     }

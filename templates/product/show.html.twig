@@ -1,8 +1,89 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block stylesheets %}
+<style>
 
+    .middle-button {
+        background-color:{{ product.color.hexadecimal }};
+    }
+    .middle-button-2, .middle-button-3 {
+        color:{{ product.color.hexadecimal }};
+    }
+
+    .middle-button-2:hover, .middle-button-3:hover {
+        color: #fff;
+        background-color: {{ product.color.hexadecimal }};
+    }
+
+    .middle-button:hover {
+        color:#fff;
+    }
+</style>
+
+{% endblock %}
 {% block body %}
+    <div class="container-fluid container-show" style="background-image: url({{ product.color.url }})">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 contain-dwarf" style="background-image: url({{ product.color.circleColor }})">
+                        <img class="img-show" src="{{ product.picture[0].url }}">
+                    </div>
+                    <div class="col-md-6 right-col">
+                        <h1 class="title-show" style="color:{{ product.color.hexadecimal }}">{{ product.name }}  <i class="far fa-thumbs-up"></i></h1> 
+                        <p class="subtitle-show">{{ product.content | slice(0, 80)|striptags }}</p>
+                        <p class="subtitle-show">{{ product.content | slice(80, 90)|striptags }}</p>
+                            <div class="contain-price-button">
+                                <p class="price-show" style="color:{{ product.color.hexadecimal }}">{{ product.price }}.00€</p>
+                                <a class="button-share" style="background-color:{{ product.color.hexadecimal }}" href="#"> Partager </a>
+                            </div>
+                            <div class="contain-button">
+                                <a class="middle-button" href="#">Detail</a>
+                                <a class="middle-button-2" href="#">Categorie</a>
+                                <a class="middle-button-3" href="#">Dimension</a>
+                            </div>
+                            <p class="detail"><span class="title-description" style="color:{{ product.color.hexadecimal }}">{{ product.name }} : </span>{{ product.content|striptags }}</p>
+                            <a href="{{ path('cart_add', { 'id' : product.id }) }}" class="add-cart" style="background-color:{{ product.color.hexadecimal }}"><i class="fas fa-cart-arrow-down"></i> Ajouter au panier</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+{% block javascripts %}
+<script>
+    document.querySelector('.middle-button').addEventListener('click', () => {
+        document.querySelector('.middle-button').style.background= '{{ product.color.hexadecimal }}';
+        document.querySelector('.middle-button').style.color= '#fff';
+        document.querySelector('.middle-button-2').style.background= '#fff';
+        document.querySelector('.middle-button-2').style.color= '{{ product.color.hexadecimal }}';
+        document.querySelector('.middle-button-3').style.background= '#fff';
+        document.querySelector('.middle-button-3').style.color= '{{ product.color.hexadecimal }}';
+        document.querySelector('.detail').innerHTML = "<span class='title-description' style='color:{{ product.color.hexadecimal }}'>{{ product.name }}: </span>{{ product.content|striptags }}";
+    });
+
+    document.querySelector('.middle-button-2').addEventListener('click', () => {
+        document.querySelector('.middle-button-2').style.background= '{{ product.color.hexadecimal }}';
+        document.querySelector('.middle-button-2').style.color= '#fff';
+        document.querySelector('.middle-button').style.background= '#fff';
+        document.querySelector('.middle-button').style.color= '{{ product.color.hexadecimal }}';
+        document.querySelector('.middle-button-3').style.background= '#fff';
+        document.querySelector('.middle-button-3').style.color= '{{ product.color.hexadecimal }}';
+        document.querySelector('.detail').innerHTML = "<span class='title-description' style='color:{{ product.color.hexadecimal }}'>{{ product.name }}: </span>{{ product.category }}";
+    });
+
+    document.querySelector('.middle-button-3').addEventListener('click', () => {
+        document.querySelector('.middle-button-3').style.background= '{{ product.color.hexadecimal }}';
+        document.querySelector('.middle-button-3').style.color= '#fff';
+        document.querySelector('.middle-button').style.background= '#fff';
+        document.querySelector('.middle-button').style.color= '{{ product.color.hexadecimal }}';
+        document.querySelector('.middle-button-2').style.background= '#fff';
+        document.querySelector('.middle-button-2').style.color= '{{ product.color.hexadecimal }}';
+        document.querySelector('.detail').innerHTML = "<span class='title-description' style='color:{{ product.color.hexadecimal }}'>{{ product.name }}: </span>{{ product.size }}";
+    });
+
+</script>
+{% endblock %}
 
 {% endblock %}
