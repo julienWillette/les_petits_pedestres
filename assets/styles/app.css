@@ -313,6 +313,23 @@
     background-color: red;
 }
 
+#checkout-button {
+    font-size: 30px;
+    border: none;
+    background-color: #FAD1D9;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 3%;
+    margin-right: 3%;
+    float: right;
+    text-decoration: none; 
+}
+
 .contain-img-cart {
     width: 200px;
     display: flex;
