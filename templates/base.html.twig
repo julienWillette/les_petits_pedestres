@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-         {{ encore_entry_link_tags('app') }}
-         <link rel="stylesheet" href="assets/styles/app.css">
-        {% block stylesheets %}{% endblock %}
 
-    </head>
-    <body>
-        {% include "navbar.html.twig" %}
-        {% block body %}{% endblock %}
-        <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-       {{ encore_entry_script_tags('app') }}
-       <script src="https://kit.fontawesome.com/12c728ad22.js" crossorigin="anonymous"></script>
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    {{ encore_entry_link_tags('app') }}
+    <link rel="stylesheet" href="assets/styles/app.css">
+    {% block stylesheets %}{% endblock %}
+
+</head>
+<nav class="nav-general">
+    <img class="logo-petit-pedestre" src="https://zupimages.net/up/21/02/ysft.png" alt="logo-petit-pedestre">
+    <div class="nav-menu">
+        <a href="{{ path('home') }}" class="path">Home</a>
+        <a href="{{ path('product') }}" class="path">Produits</a>
+        <a href="#" class="path">Blog</a>
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+        <a href="#" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i></a>
+    </div>
+</nav>
+
+<body>
+    {% block body %}{% endblock %}
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    {{ encore_entry_script_tags('app') }}
+    <script src="https://kit.fontawesome.com/12c728ad22.js" crossorigin="anonymous"></script>
+    {% block javascripts %}{% endblock %}
+</body>
+
 </html>
