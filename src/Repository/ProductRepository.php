@@ -43,11 +43,7 @@ class ProductRepository extends ServiceEntityRepository
      */
     public function findMinMax(SearchData $search): array
     {
-        $results = $this->getSearchQuery($search, true)
-            ->select('MAX(p.price) as max')
-            ->getQuery()
-            ->getScalarResult();
-        return [0, (int)$results[0]['max']];
+        return [0, 100];
     }
 
     /*

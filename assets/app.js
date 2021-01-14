@@ -15,6 +15,7 @@ import noUiSlider from 'nouislider'
 import 'nouislider/distribute/nouislider.css'
 import './styles/app.css';
 
+
 const slider = document.getElementById('price-slider')
 
 if (slider) {
