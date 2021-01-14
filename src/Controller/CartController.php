@@ -54,7 +54,17 @@ class CartController extends AbstractController
         $cart[$id]++;
 
         $session->set('cart', $cart);
-
+         
+        $session->get('count', []);
+        
+        $count = 0;
+        
+        foreach ($cart as $key=>$value) {
+            $count = $value + $count;
+        } 
+ 
+        $session->set('count', $count);
+        
         return $this->redirectToRoute("product");
     }
 
@@ -70,6 +80,14 @@ class CartController extends AbstractController
         }
 
         $session->set('cart', $cart);
+
+        $count = 0;
+        
+        foreach ($cart as $key=>$value) {
+            $count = $value + $count;
+        } 
+ 
+        $session->set('count', $count);
 
         return $this->redirectToRoute('cart_index');
     }

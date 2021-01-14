@@ -307,3 +307,9 @@
     left: 23%;
 
 }
+/* PANIER */
+
+.badge-cart {
+    background-color: red;
+}
+

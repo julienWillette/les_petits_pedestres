@@ -1,0 +1,11 @@
+
+        {% if app.session.get('cart') %}
+            <a href="{{ path('cart_index') }}">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge badge-danger badge-cart">{{ app.session.get('count') }}</span>
+            </a>
+        {% else %}
+            <a href="{{ path('cart_index') }}">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        {% endif %}
