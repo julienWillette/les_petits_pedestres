@@ -44,6 +44,7 @@ class Blog
         $this->picture = new ArrayCollection();
     }
 
+
     public function getId(): ?int
     {
         return $this->id;
