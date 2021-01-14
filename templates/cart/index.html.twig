@@ -13,10 +13,10 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Unit price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
+                    <th>{{ 'Nom'|trans }}</th>
+                    <th>{{ 'Prix Unitaire'|trans }}</th>
+                    <th>{{ 'Quantité'|trans }}</th>
+                    <th>{{ 'Total'|trans }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,10 +44,10 @@
                 </tr>
             </tfoot>
         </table>
-        <a href="{{ path('success') }}"<button type="submit" id="checkout-button">Checkout</button></a>
+        <a href="{{ path('success') }}"<button type="submit" id="checkout-button">{{ 'Passer au paiement'|trans }}</button></a>
 
     {% else %}
-        <p> It's empty !</p>
+        <p> {{ 'Votre panier est vide !'|trans }} !</p>
     {% endif %}
 
 {% endblock %}

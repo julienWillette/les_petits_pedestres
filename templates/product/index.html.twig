@@ -10,10 +10,10 @@
       <div class="row">
         <div class="col-md-3 container-filter">
           {{ form_start(form) }}
-          <p class="filter-title">Filtrer par :</p>
+          <p class="filter-title">{{ 'Filtrer par'|trans }}</p>
           {{ form_row(form.q) }}
           <hr class="hr-filter">
-          <p class="subtitle-filter">Prix</p>
+          <p class="subtitle-filter">{{ 'Prix'|trans }}</p>
           <div class="row">
             <div class="col-md-6">
               {{ form_row(form.min) }}
@@ -25,13 +25,13 @@
           <div id="price-slider" data-min="{{ min }}" data-max="{{ max }}" class="mt-3 mb-3">
           </div>
           <hr class="hr-filter">
-          <p class="subtitle-filter">Catégories</p>
+          <p class="subtitle-filter">{{ 'Catégories'|trans }}</p>
           <p class="filter">{{ form_row(form.category) }}</p>
           <hr class="hr-filter">
-          <p class="subtitle-filter">Taille</p>
+          <p class="subtitle-filter">{{ 'Prix'|trans }}</p>
           <p class="filter">{{ form_row(form.size) }}</p>
           <hr class="hr-filter">
-          <p class="subtitle-filter">En promotion</p>
+          <p class="subtitle-filter">{{ 'En Promotion'|trans }}</p>
           <p class="filter">{{ form_row(form.promo) }}</p>
           <button type="submit" class="btn btn-primary w-100 btn-filtre">Filtrer</button>
           {{ form_end(form) }}
