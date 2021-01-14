@@ -451,3 +451,28 @@ header{
     margin: auto;
     margin-top: 5%;
 }
+
+/* SUCCESS */
+
+.btn-command-success {
+    background-color: #76c2a6;
+}
+
+/* END SUCCESS */
+
+/* CART ICON */
+.badge {
+    position: absolute;
+    display: inline-block;
+    padding: 0em;
+    margin-left: 1em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+/* END ICON */

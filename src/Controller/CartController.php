@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CartController extends AbstractController
 {
     /**
-     * @Route("/cart", name="cart_index")
+     * @Route("/panier", name="cart_index")
      */
     public function index(SessionInterface $session, ProductRepository $productRepository)
     {

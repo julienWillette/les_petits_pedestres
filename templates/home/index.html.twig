@@ -21,7 +21,14 @@
         <a href="#" class="path">{{ 'Blog'|trans }}</a>
         <button class="login">Login</button>
         <button class="signup">Sign Up</button>
-        <a href="#" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i></a>
+        {% if app.session.get('cart') %}
+        <a href="{{ path('cart_index') }}" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i>
+        <span class="badge badge-danger badge-cart">{{ app.session.get('count') }}</span></a>
+         {% else %}
+            <a href="{{ path('cart_index') }}">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        {% endif %}
     </div>
     <p class="sentence">
         {{ 'Tout pour votre jardin,
@@ -40,7 +47,7 @@
     <p class="sectionHome">{{ 'Les plus populaires'|trans }}</p>
 
 </div>
-<div class="container-fluid contain-home-card">
+<div class="container-fluid contain-home-card mb-5">
     {% for product in products %}
 
     <a class="aled-link" href="{{ path('product_show', {'slug': product.slug }) }}">
