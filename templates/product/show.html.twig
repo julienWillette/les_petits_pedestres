@@ -32,7 +32,7 @@
                         <img class="img-show" src="{{ product.picture[0].url }}">
                     </div>
                     <div class="col-md-6 right-col">
-                        <h1 class="title-show" style="color:{{ product.color.hexadecimal }}">{{ 'product.name'|trans }}  <i class="far fa-thumbs-up"></i></h1> 
+                        <h1 class="title-show" style="color:{{ product.color.hexadecimal }}">{{ product.name }}  <i class="far fa-thumbs-up"></i></h1> 
                         <p class="subtitle-show">{{ product.content | slice(0, 80)|striptags }}</p>
                         <p class="subtitle-show">{{ product.content | slice(80, 90)|striptags }}</p>
                             <div class="contain-price-button">
