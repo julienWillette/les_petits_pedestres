@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Product;
 use App\Data\SearchData;
 use App\Form\SearchType;
+use App\Service\CartService;
 use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -37,8 +38,16 @@ class ProductController extends AbstractController
     /**
      * @Route("/{slug}", name="product_show")
      */
-    public function show(Product $product): Response
+    public function show(Product $product, CartService $cartService): Response
     {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if ((isset($_POST['submit'])) &&
+            (!empty($_POST['add_id']))) {
+            }
+            $id = $_POST['add_id'];
+            $cartService->add($id);
+        }
+        
         return $this->render('product/show.html.twig', [
             'product' => $product,
         ]);

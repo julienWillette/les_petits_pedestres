@@ -45,8 +45,10 @@
                                 <a class="middle-button-3" href="#">{{ 'Dimensions'|trans }}</a>
                             </div>
                             <p class="detail"><span class="title-description" style="color:{{ product.color.hexadecimal }}">{{ product.name }} : </span>{{ product.content|striptags }}</p>
-                            <a href="{{ path('cart_add', { 'id' : product.id }) }}" class="add-cart" style="background-color:{{ product.color.hexadecimal }}"><i class="fas fa-cart-arrow-down"></i> {{'Ajouter au panier'|trans}}</a>
-
+                            <form method="POST">
+								<input type="text" class="d-none" name="add_id" value="{{product.id}}">
+                            <button type="submit" class="add-cart" style="background-color:{{ product.color.hexadecimal }}"><i class="fas fa-cart-arrow-down"></i>{{'Ajouter au panier'|trans}}</button>
+                            </form>
                     </div>
                 </div>
             </div>
