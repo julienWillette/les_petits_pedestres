@@ -1,9 +1,66 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}{{ 'Accueil'|trans }}{% endblock %}
+{% block stylesheets %}
+<style>
+    .nav-general {
+        display: none;
+    }
+</style>
+{% endblock %}
 
 {% block body %}
-<div class="container">
-Salut les petits pédestres
+<header>
+    <img src="https://zupimages.net/up/21/02/d5yc.png" alt="" class="img-dwarf">
+    <img class="grass" src="https://zupimages.net/up/21/02/jl0c.png" alt="grass">
+    <img src="https://zupimages.net/up/21/02/d5yc.png" alt="" class="img-dwarf">
+    <img class="logo-petit-pedestre" src="https://zupimages.net/up/21/02/ysft.png" alt="logo-petit-pedestre">
+    <div class="nav-menu">
+        <a href="{{ path('home') }}" class="path">{{ 'Accueil'|trans }}</a>
+        <a href="{{ path('product') }}" class="path">{{ 'Produits'|trans }}</a>
+        <a href="{{ path('blog') }}" class="path">{{ 'Blog'|trans }}</a>
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+        {% if app.session.get('cart') %}
+        <a href="{{ path('cart_index') }}" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i>
+        <span class="badge badge-danger badge-cart">{{ app.session.get('count') }}</span></a>
+         {% else %}
+            <a href="{{ path('cart_index') }}" class="cart-cart cart-nav">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        {% endif %}
+        <a href="http://localhost:8000/fr" class="path"><img src="{{ asset('assets/images/fr.png') }}" alt="french flag"></a>
+        <a href="http://localhost:8000/en" class="path"><img src="{{ asset('assets/images/en.png') }}" alt="english flag"></a>
+        <a href="http://localhost:8000/uz" class="path"><img src="{{ asset('assets/images/uz.png') }}" alt="ouzbekistan flag"></a> 
+    </div>
+    <p class="sentence">
+        {{ 'Tout pour votre jardin,
+        à portée de nain'|trans }}</p>
+</header>
+
+</div>
+
+<div class="container-fluid ">
+    <p class="sectionHome">{{ 'Les plus populaires'|trans }}</p>
+
+</div>
+<div class="container-fluid contain-home-card mb-5">
+    {% for product in products %}
+
+    <a class="aled-link" href="{{ path('product_show', {'slug': product.slug }) }}">
+        <div class="card-dwarf green" style="background-color: {{ product.color.hexadecimal }};">
+            <p class="title-card">{{ product.name }}</p>
+            <p class="heart"><i class="far fa-heart"></i></p>
+            <p class="number-like">{{ product.rate }}</p>
+            <img class="img-product" src="{{ product.picture[0].url }}">
+            <div class="container-prix">
+                <p class="price">{{ product.price }}€</p>
+            </div>
+        </div>
+        {% endfor %}
+</div>
+<hr>
+<div class="container-fluid">
+    <img class="dwarf-picture-gold" src="https://zupimages.net/up/21/02/gova.png" alt="dwarf-description">
 </div>
 {% endblock %}

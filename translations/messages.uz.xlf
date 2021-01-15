@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="uz" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Uy</target>
+      </trans-unit>
+      <trans-unit id="SbPPeKx" resname="Produits">
+        <source>Produits</source>
+        <target>Mahsulotlar</target>
+      </trans-unit>
+      <trans-unit id="jGvAmVN" resname="Blog">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="iiQYwQ8" resname="Tout pour votre jardin,&#10;        à portée de nain">
+        <source>Tout pour votre jardin,
+        à portée de nain</source>
+        <target>Sizning bog'ingiz uchun !</target>
+      </trans-unit>
+      <trans-unit id="qb2L0j2" resname="Les plus populaires">
+        <source>Les plus populaires</source>
+        <target>Eng mashhur</target>
+      </trans-unit>
+      <trans-unit id="qMD7oaF" resname="Bienvenue !">
+        <source>Bienvenue !</source>
+        <target>Xush kelibsiz!</target>
+      </trans-unit>
+      <trans-unit id="AP4XPYb" resname="Nos produits">
+        <source>Nos produits</source>
+        <target>Mahsulotlarimiz</target>
+      </trans-unit>
+      <trans-unit id="kKzpQAZ" resname="Filtrer par">
+        <source>Filtrer par</source>
+        <target>Filtrlash orqali</target>
+      </trans-unit>
+      <trans-unit id="VMMk9sE" resname="Prix">
+        <source>Prix</source>
+        <target>Narx</target>
+      </trans-unit>
+      <trans-unit id="SxUSCLz" resname="Catégories">
+        <source>Catégories</source>
+        <target>Kategoriyalar</target>
+      </trans-unit>
+      <trans-unit id="LLjxnUD" resname="En Promotion">
+        <source>En Promotion</source>
+        <target>Chegirma bo'yicha</target>
+      </trans-unit>
+      <trans-unit id="1ndJcxH" resname="Désolée ! Votre recherche nain rien donnée">
+        <source>Désolée ! Votre recherche nain rien donnée</source>
+        <target>Kechirasiz! Sizning qidiruv mitti hech narsa berilmagan</target>
+      </trans-unit>
+      <trans-unit id="ExZiI0X" resname="Partager">
+        <source>Partager</source>
+        <target>Baham ko'ring</target>
+      </trans-unit>
+      <trans-unit id="F_ruSJs" resname="Détails">
+        <source>Détails</source>
+        <target>Tafsilotlar</target>
+      </trans-unit>
+      <trans-unit id="kUGC1eJ" resname="Dimensions">
+        <source>Dimensions</source>
+        <target>O'lchamlari</target>
+      </trans-unit>
+      <trans-unit id="0Yq87Uy" resname="Ajouter au panier">
+        <source>Ajouter au panier</source>
+        <target>Savatchaga qo'shish</target>
+      </trans-unit>
+      <trans-unit id="lKWm078" resname="Votre panier">
+        <source>Votre panier</source>
+        <target>Sizning savatingiz</target>
+      </trans-unit>
+      <trans-unit id="ssEkU20" resname="Nom">
+        <source>Nom</source>
+        <target>Familiya</target>
+      </trans-unit>
+      <trans-unit id="Tc1qa5n" resname="Prix Unitaire">
+        <source>Prix Unitaire</source>
+        <target>Donasining narxi</target>
+      </trans-unit>
+      <trans-unit id="olio7wM" resname="Quantité">
+        <source>Quantité</source>
+        <target>Miqdor</target>
+      </trans-unit>
+      <trans-unit id="ybPDgkf" resname="Total">
+        <source>Total</source>
+        <target>Jami</target>
+      </trans-unit>
+      <trans-unit id="oDtuWT5" resname="Passer au paiement">
+        <source>Passer au paiement</source>
+        <target>To'lovga o'ting</target>
+      </trans-unit>
+      <trans-unit id="3qx.DSp" resname="Votre panier est vide !">
+        <source>Votre panier est vide !</source>
+        <target>Savatingiz bo'sh!</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
