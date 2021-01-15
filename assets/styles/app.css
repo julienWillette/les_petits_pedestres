@@ -516,3 +516,31 @@ header{
     border-radius: .25rem;
 }
 /* END ICON */
+.blog-card{
+    margin-right: 10px;
+    width: 10em;
+    height: 40em;
+    }
+    
+    .blog-filter{
+    background-image: url("https://www.jardinsdebroceliande.fr/voy_content/uploads/2019/09/DSC_1104BD.jpg;");
+    height: 30em;
+    filter: brightness(60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .blog-jumbotron{
+    color: white;
+    filter: invert();
+    }
+    .blog-card-img{
+        width: 10em;
+        height: 17em;
+    }
+    .blog-btn-prm{
+        margin-top: 5px;
+    }
+    .blog-card-text{
+        margin-bottom: 5px;
+    }
