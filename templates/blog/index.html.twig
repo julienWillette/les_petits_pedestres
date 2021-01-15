@@ -9,11 +9,6 @@
 <div class="container">
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          src="https://www.deco.fr/sites/default/files/styles/article_970x500/public/2019-09/shutterstock_287585528.jpg?itok=iFtpAjj8"
-          class="d-block w-100" alt="...">
-      </div>
     </div>
   </div>
   <hr>
@@ -21,12 +16,13 @@
     <div class="row">
       {% for blog in blogs %}
       <div class="col-lg-4">
-        <div class="card blog-card" style="width: 22rem;">
+        <div class="card blog-card text-center" style="width: 22rem;">
           <img src="{{blog.picture[0].url}}" class="card-img-top blog-card-img" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{blog.title}}</h5>
             <p class="card-text blog-card-text">{{blog.content | striptags | slice(0, 200)}}</p>
-            <a href="{{ path('blog_show', {'slug': blog.slug }) }}" class="btn btn-primary blog-btn-prm">Lire cet article</a>
+            <a href="{{ path('blog_show', {'slug': blog.slug }) }}" class="btn btn-primary blog-btn-prm">Lire cet
+              article</a>
           </div>
         </div>
       </div>

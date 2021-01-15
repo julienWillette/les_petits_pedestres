@@ -33,11 +33,11 @@ class ProductRepository extends ServiceEntityRepository
         return $this->paginator->paginate(
             $query,
             $search->page,
-            6
+            8
         );
     }
 
-     /**
+    /**
      * Récupère le prix minimum et maximum correspondant à une recherche
      * @return integer[]
      */
@@ -52,46 +52,46 @@ class ProductRepository extends ServiceEntityRepository
     private function getSearchQuery(SearchData $search): QueryBuilder
     {
         $query = $this
-        ->createQueryBuilder('p')
-        ->join('p.category', 'c')
-        ->join('p.size', 's');
+            ->createQueryBuilder('p')
+            ->join('p.category', 'c')
+            ->join('p.size', 's');
 
-        
+
         if (!empty($search->q)) {
-                $query = $query
-                    ->andWhere('p.name LIKE :q')
-                    ->setParameter('q', "%{$search->q}%");
-            }
-    
-            if (!empty($search->min)) {
-                $query = $query
-                    ->andWhere('p.price >= :min')
-                    ->setParameter('min', $search->min);
-            }
-    
-            if (!empty($search->max)) {
-                $query = $query
-                    ->andWhere('p.price <= :max')
-                    ->setParameter('max', $search->max);
-            }
-    
-            if (!empty($search->promo)) {
-                $query = $query
-                    ->andWhere('p.isPromo = 1');
-            }
+            $query = $query
+                ->andWhere('p.name LIKE :q')
+                ->setParameter('q', "%{$search->q}%");
+        }
 
-            if (!empty($search->size)) {
-                $query = $query
-                    ->andWhere('c.id IN (:size)')
-                    ->setParameter('size', $search->size);
-            }
-    
-            if (!empty($search->category)) {
-                $query = $query
-                    ->andWhere('c.id IN (:category)')
-                    ->setParameter('category', $search->category);
-            }
+        if (!empty($search->min)) {
+            $query = $query
+                ->andWhere('p.price >= :min')
+                ->setParameter('min', $search->min);
+        }
 
-            return $query;
+        if (!empty($search->max)) {
+            $query = $query
+                ->andWhere('p.price <= :max')
+                ->setParameter('max', $search->max);
+        }
+
+        if (!empty($search->promo)) {
+            $query = $query
+                ->andWhere('p.isPromo = 1');
+        }
+
+        if (!empty($search->size)) {
+            $query = $query
+                ->andWhere('c.id IN (:size)')
+                ->setParameter('size', $search->size);
+        }
+
+        if (!empty($search->category)) {
+            $query = $query
+                ->andWhere('c.id IN (:category)')
+                ->setParameter('category', $search->category);
+        }
+
+        return $query;
     }
 }
