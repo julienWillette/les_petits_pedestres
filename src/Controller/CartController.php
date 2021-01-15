@@ -41,34 +41,6 @@ class CartController extends AbstractController
     }
 
     /**
-     * @Route("/add/{id}", name="cart_add")
-     */
-    public function add($id, SessionInterface $session)
-    {
-        $cart = $session->get('cart', []);
-
-        if (empty($cart[$id])) {
-            $cart[$id] = 0;
-        }
-
-        $cart[$id]++;
-
-        $session->set('cart', $cart);
-         
-        $session->get('count', []);
-        
-        $count = 0;
-        
-        foreach ($cart as $key=>$value) {
-            $count = $value + $count;
-        } 
- 
-        $session->set('count', $count);
-        
-        return $this->redirectToRoute("product");
-    }
-
-    /**
      * @Route("/delete/{id}", name="cart_remove")
      */
     public function remove($id, SessionInterface $session)

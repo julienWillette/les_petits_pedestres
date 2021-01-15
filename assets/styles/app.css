@@ -238,6 +238,7 @@
     margin: auto;
     display: flex;
     border-radius: 60px;
+    border: none; 
     align-items: center;
     justify-content: center;
     font-size: 40px;

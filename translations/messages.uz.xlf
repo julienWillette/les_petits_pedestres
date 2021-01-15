@@ -98,6 +98,10 @@
         <source>Votre panier est vide !</source>
         <target>Savatingiz bo'sh!</target>
       </trans-unit>
+      <trans-unit id="dwk_DDP" resname="Taille">
+        <source>Taille</source>
+        <target>Kesilgan</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
