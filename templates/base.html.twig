@@ -1,50 +1,17 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        {% block stylesheets %}{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{{ 'Bienvenue !'|trans }}{% endblock %}</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    {{ encore_entry_link_tags('app') }}
-    <link rel="stylesheet" href="assets/styles/app.css">
-    <link rel="icon" href="{{ asset ('assets/images/favicon.ico') }}" />
-    {% block stylesheets %}{% endblock %}
-
-</head>
-<nav class="nav-general">
-    <img class="logo-petit-pedestre" src="https://zupimages.net/up/21/02/ysft.png" alt="logo-petit-pedestre">
-    <div class="nav-menu">
-        <a href="{{ path('home') }}" class="path">{{ 'Accueil'|trans }}</a>
-        <a href="{{ path('product') }}" class="path">{{ 'Produits'|trans }}</a>
-        <a href="#" class="path">Blog</a>
-        <button class="login">Login</button>
-        <button class="signup">Sign Up</button>
-        {% if app.session.get('cart') %}
-        <a href="{{ path('cart_index') }}" class="cart-cart cart-nav"><i class="fas fa-shopping-cart "></i>
-        <span class="badge badge-danger badge-cart">{{ app.session.get('count') }}</span></a>
-         {% else %}
-            <a href="{{ path('cart_index') }}" class="cart-cart cart-nav">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-        {% endif %}
-        <a href="http://localhost:8000/fr/produit" class="path"><img src="{{ asset('assets/images/fr.png') }}" alt="french flag"></a>
-        <a href="http://localhost:8000/en/produit" class="path"><img src="{{ asset('assets/images/en.png') }}" alt="english flag"></a>
-        <a href="http://localhost:8000/uz/produit" class="path"><img src="{{ asset('assets/images/uz.png') }}" alt="ouzbekistan flag"></a> 
-
-    </div>
-</nav>
-
-<body>
-    {% block body %}{% endblock %}
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-    {{ encore_entry_script_tags('app') }}
-    <script src="https://kit.fontawesome.com/12c728ad22.js" crossorigin="anonymous"></script>
-    {% block javascripts %}{% endblock %}
-</body>
-
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
 </html>
